@@ -13,7 +13,10 @@ public class PlayerLife : MonoBehaviour
         {
             Die();
         }
+        
     }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy Body"))
@@ -31,7 +34,7 @@ public class PlayerLife : MonoBehaviour
         dead = true;
         deathSound.Play();
     }
-
+    
     void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
